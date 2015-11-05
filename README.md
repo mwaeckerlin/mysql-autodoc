@@ -2,6 +2,8 @@
 
 Docker image to generate a HTML documentation file from a docker mysql database container.
 
+You may specify a database to document using the environment variable DATABASE. If you do not specify a database, all databases are dcumented, including those used by mysql itself.
+
 Connect to a mysql-database, then get the files and cleanup the container:
 
     docker run --name get-db-doc --link a-mysql-db:mysql -e DATABASE="dbname" mwaeckerlin/mysql-autodoc
